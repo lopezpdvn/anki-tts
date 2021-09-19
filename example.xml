@@ -6,10 +6,8 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.w3.org/2001/10/synthesis">
   <p>
-    <s>You have 4 new messages.</s>
-    <s>The first is from Stephanie Williams and arrived at <break/> 3:45pm.</s>
-    <s>
-      The subject is <prosody rate="-20%">ski trip</prosody>
-    </s>
+    <s>To encourage, support, or cheer for someone or something; to wish the best for someone or something in an endeavor or activity.</s>
+    <break strength="none" time="4s">
+    <s>root for</s>
   </p>
 </speak>
