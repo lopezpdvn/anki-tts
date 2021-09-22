@@ -1,6 +1,8 @@
+<!-- Example from SSML 1.1 specification, Appendix E
+     https://www.w3.org/TR/speech-synthesis11/#AppE
+-->
 <speak version="1.1"
        xmlns="http://www.w3.org/2001/10/synthesis"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.w3.org/2001/10/synthesis">
-
 </speak>
