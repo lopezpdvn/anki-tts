@@ -5,13 +5,10 @@ REVIEW_BREAK_TIME = '4s'
 CARD_BREAK_STRENGTH = 'none'
 CARD_BREAK_TIME = '2s'
 
-def get_cards():
-    yield ('To encourage, support, or cheer for someone or something; to wish the best for someone or something in an endeavor or activity.',
-            'root for')
-    yield ('To be or become distracted, preoccupied, or unfocused from the present moment or the task at hand. Example: I love looking out the window on the train and just ___ for a few minutes.',
-            'space out')
-    yield ('To question or interrogate someone intensely and relentlessly (about something)',
-            'grill (someone) (about something)')
+def get_cards(filepath = './anki_exports/Default.txt', card_sep_char = '\t'):
+    with open(filepath, mode='r') as f:
+        for line in f.readlines():
+            yield line.split(card_sep_char)
 
 tree = ET.parse('example_tmpl.xml')
 root = tree.getroot()
