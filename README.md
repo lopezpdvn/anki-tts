@@ -12,5 +12,5 @@ Usage
 
 ```bash
 $ python3 main.py > example.xml
-$ espeak -m -f example.xml
+$ espeak -m -f example.xml -s 150 -w example.wav
 ```
