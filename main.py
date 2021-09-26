@@ -5,10 +5,16 @@ REVIEW_BREAK_TIME = '4s'
 CARD_BREAK_STRENGTH = 'none'
 CARD_BREAK_TIME = '2s'
 
-def get_cards(filepath = './anki_exports/Default.txt', card_sep_char = '\t'):
+def get_cards_fs(filepath = './anki_exports/Default.txt', card_sep_char = '\t'):
     with open(filepath, mode='r') as f:
         for line in f.readlines():
             yield line.split(card_sep_char)
+
+def get_cards():
+    from random import shuffle
+    x = [*get_cards_fs()]
+    shuffle(x)
+    return x
 
 tree = ET.parse('example_tmpl.xml')
 root = tree.getroot()
