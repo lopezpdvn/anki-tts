@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as ET
 
 REVIEW_BREAK_STRENGTH = 'none'
-REVIEW_BREAK_TIME = '4s'
+REVIEW_BREAK_TIME = '8s'
 CARD_BREAK_STRENGTH = 'none'
 CARD_BREAK_TIME = '2s'
 
