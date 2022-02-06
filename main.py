@@ -5,6 +5,7 @@ REVIEW_BREAK_STRENGTH = 'none'
 REVIEW_BREAK_TIME = '8s'
 CARD_BREAK_STRENGTH = 'none'
 CARD_BREAK_TIME = '2s'
+NOTE_BACK_SUFFIX_REMOVE_PATTERN = ('examples:.*', re.IGNORECASE)
 
 def get_cards_fs(filepath = './anki_exports/Default.txt', card_sep_char = '\t'):
     with open(filepath, mode='r') as f:
@@ -20,7 +21,7 @@ def get_cards():
 tree = ET.parse('example_tmpl.xml')
 root = tree.getroot()
 
-reobj = re.compile('examples:.*', re.IGNORECASE)
+reobj = re.compile(*NOTE_BACK_SUFFIX_REMOVE_PATTERN)
 
 first = True
 for front, back in get_cards():
