@@ -1,3 +1,4 @@
+import re
 import xml.etree.ElementTree as ET
 
 REVIEW_BREAK_STRENGTH = 'none'
@@ -19,6 +20,8 @@ def get_cards():
 tree = ET.parse('example_tmpl.xml')
 root = tree.getroot()
 
+reobj = re.compile('examples:.*', re.IGNORECASE)
+
 first = True
 for front, back in get_cards():
     if first:
@@ -26,6 +29,8 @@ for front, back in get_cards():
     else:
         brk = ET.SubElement(p, 'break', strength=CARD_BREAK_STRENGTH,
                                         time=CARD_BREAK_TIME)
+
+    back = re.sub(reobj, '', back)
 
     p = ET.SubElement(root, 'p')
     s = ET.SubElement(p, 's')
