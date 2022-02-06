@@ -2,7 +2,7 @@ import re
 import xml.etree.ElementTree as ET
 
 REVIEW_BREAK_STRENGTH = 'none'
-REVIEW_BREAK_TIME = '8s'
+REVIEW_BREAK_TIME = '5s'
 CARD_BREAK_STRENGTH = 'none'
 CARD_BREAK_TIME = '2s'
 NOTE_BACK_SUFFIX_REMOVE_PATTERN = ('examples:.*', re.IGNORECASE)
